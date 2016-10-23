@@ -1,6 +1,6 @@
 {
   "name": "stateful-title",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Stateful title management.",
   "license": "MIT",
   "repository": "egoist/stateful-title",
@@ -33,9 +33,9 @@
   "eslintConfig": {
     "extends": "egoist/esnext",
     "globals": {
-        "test": true,
-        "expect": true,
-        "document": true
-      }
+      "test": true,
+      "expect": true,
+      "document": true
+    }
   }
 }
