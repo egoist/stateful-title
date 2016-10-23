@@ -13,28 +13,35 @@ $ npm install --save stateful-title
 ```js
 const statefulTitle = require('stateful-title')
 
-statefulTitle('unicorns')
-//=> 'unicorns & rainbows'
+const title = statefulTitle('old title')
+
+// set new title
+title('new title')
+// document.title => 'new title'
+
+// reset to old title
+title()
+// document.title => 'old title'
 ```
 
 ## API
 
-### statefulTitle(input, [options])
+### statefulTitle(oldTitle, [set])
 
-#### input
+It returns a function which accepts a new title as the only parameter to set `document.title`. If no new title was specified it defaults to old title.
+
+#### oldTitle
 
 Type: `string`
 
-Lorem ipsum.
+Old document title.
 
-#### options
-
-##### foo
+#### set
 
 Type: `boolean`  
 Default: `false`
 
-Lorem ipsum.
+Set document.title to `oldTitle`.
 
 ## Contributing
 
