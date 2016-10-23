@@ -1,0 +1,41 @@
+{
+  "name": "stateful-title",
+  "version": "0.0.0",
+  "description": "Stateful title management.",
+  "license": "MIT",
+  "repository": "egoist/stateful-title",
+  "author": {
+    "name": "EGOIST",
+    "email": "0x142857@gmail.com",
+    "url": "github.com/egoist"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "npm run build && jest && eslint src/*.js __test__/*.js",
+    "build": "bili --format umd"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "dist/stateful-title.js",
+  "keywords": [
+    "title",
+    "document"
+  ],
+  "devDependencies": {
+    "bili": "^0.6.3",
+    "eslint": "latest",
+    "eslint-config-egoist": "latest",
+    "jest-cli": "^15.1.1"
+  },
+  "eslintConfig": {
+    "extends": "egoist/esnext",
+    "globals": {
+        "test": true,
+        "expect": true,
+        "document": true
+      }
+  }
+}
